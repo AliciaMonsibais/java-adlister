@@ -9,21 +9,22 @@ import java.io.PrintWriter;
 @WebServlet (name = "HelloWorldServlet", urlPatterns="/hello")
 public class HelloWorldServlet extends HttpServlet {
 
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         String name = req.getParameter("name");
+        res.setContentType("text/html");
+        PrintWriter out = res.getWriter();
 
         if (name == null){
             name = "No One";
         }
 
-        res.getWriter().println("<h1 style=\"font-family: cursive;\">Hello, " + name + "!</h1>");
-        res.getWriter().println("<p>Enter your name: </p>");
-        res.getWriter().println("<form action=\"/hello\">");
-        res.getWriter().println("<input name=\"name\"/>");
-        res.getWriter().println("</form>");
+        out.println("<h1 style=\"font-family: cursive;\">Hello, " + name + "!</h1>");
+        out.println("<p>Enter your name: </p>");
+        out.println("<form action=\"/hello\">");
+        out.println("<input name=\"name\"/>");
+        out.println("</form>");
 
-        res.setContentType("text/html");
-        PrintWriter out = res.getWriter();
         out.println("<h1>Hello, World!</h1>");
     }
 }
