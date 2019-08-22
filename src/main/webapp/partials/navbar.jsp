@@ -11,9 +11,18 @@
     <title>Title</title>
 </head>
 <body>
+<container>
     <nav>
-        This is my Navbar
+        <div class = "nav-wrapper">
+            <div class="brand-logo">This is my Navbar</div>
+        <ul class="right">
+            <li><a href="">Look</a></li>
+            <li><a href="">At</a></li>
+            <li><a href="">This</a></li>
+        </ul>
+        </div>
     </nav>
+</container>
 <h1>Welcome to the Site! We have cookies.</h1>
 </body>
 </html>
