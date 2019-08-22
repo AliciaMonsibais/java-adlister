@@ -9,9 +9,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Profile</title>
+    <title>Admin</title>
+    <%@ include file="/partials/header.jsp"%>
 </head>
 <body>
+<jsp:include page="partials/navbar.jsp" />
     <h1>Welcome, Admin!</h1>
+
+    <%@ include file="/partials/scripts.jsp" %>
 </body>
 </html>

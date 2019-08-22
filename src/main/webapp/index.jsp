@@ -3,8 +3,12 @@
 <%! int counter =0; %>
 <% counter += 1;%>
 <html>
-<%@ include file="/partials/header.jsp"%>
+<head>
+    <title>Home</title>
+    <%@ include file="/partials/header.jsp"%>
+</head>
 <body>
+
 <jsp:include page="partials/navbar.jsp" />
 <h1>The current count is <%= counter %>.</h1>
     <c:if test="true">
@@ -13,7 +17,6 @@
     <c:if test="false">
         <h1>single letter variable names are good</h1>
     </c:if>
-
 
 <%@ include file="/partials/scripts.jsp" %>
 </body>

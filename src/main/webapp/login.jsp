@@ -19,15 +19,19 @@
     }
 %>
 <html>
-<%@ include file="/partials/header.jsp"%>
+<head>
+    <title>Login</title>
+    <%@ include file="/partials/header.jsp"%>
+</head>
 <body>
+<jsp:include page="partials/navbar.jsp" />
 <div class="container">
-<form action="/login.jsp" method="POST">
+    <form action="/login.jsp" method="POST">
     <h1><label for="username">Username:</label></h1>
     <input type="text" name="username" id="username">
     <h1><label for="password">Password:</label></h1>
     <input type="password" name="password" id="password">
-    <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="material-icons right">send</i>
+    <button class="btn waves-effect waves-light" type="submit" name="submit-btn">Submit<i class="material-icons right">send</i>
     </button>
 </form>
 </div>
