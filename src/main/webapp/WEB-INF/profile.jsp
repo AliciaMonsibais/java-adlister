@@ -10,7 +10,7 @@
     <jsp:include page="../partials/navbar.jsp" />
 
     <div class="container">
-        <h1>Viewing your profile, ${sessionScope.username}.</h1>
+        <h1>Viewing your profile, ${sessionScope.user}.</h1>
     </div>
 
 </body>
